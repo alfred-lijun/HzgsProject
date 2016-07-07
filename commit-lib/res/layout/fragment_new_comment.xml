@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52f2f0eb"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_normal" />
+
+        <RelativeLayout
+            android:id="@+id/edittext_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#aaffffff"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" >
+
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/iv_send"
+                android:background="@drawable/textfield_search_default_holo_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/attach_comment"
+                android:maxLines="3"
+                android:minHeight="40dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="1dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:scaleType="fitCenter"
+                android:text="@string/button_send"
+                android:textColor="@drawable/software_textcolor"
+                android:textSize="32sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom" >
+
+        <LinearLayout
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:transcriptMode="normal" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left|center"
+            android:background="@drawable/default_user"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/avatar"
+            android:gravity="left|center"
+            android:textColor="@color/comment_text_color"
+            android:textSize="@dimen/setting_item_text_size" />
+
+        <TextView
+            android:id="@+id/qiandaoTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/name"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/name"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/comment_content_size" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/avatar"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/comment_text_color" />
+
+        <com.commit.view.FButton
+            android:id="@+id/deletBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/time"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@null"
+            android:text="@string/delete"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            app:buttonColor="@color/fbutton_color_alizarin"
+            app:shadowEnabled="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:lineSpacingExtra="5dip"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/play_content_size" />
+
+    <LinearLayout
+        android:id="@+id/signLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seprate_line"
+            android:background="@color/divide_line"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/signTx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="right|center_vertical"
+            android:lineSpacingExtra="5dip"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/comment_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/seprate_line"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/divide_line" />
+
+</LinearLayout>
